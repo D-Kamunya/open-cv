@@ -54,9 +54,15 @@ img = cv2.imread("Resources/wiz.jpg")
 # Resizing Images
 #Find the size
 print(img.shape) #returns tuple with H,W and channels(BGR)
-imgResize=cv2.resize(img,(400,400))
+imgResize=cv2.resize(img,(400,400)) #(W,H)
 print(imgResize.shape)
+
+# Crop image ie image is an array or matrix of pixels
+imgCropped=img[0:400,400:700] #(H,W)
+
+
 cv2.imshow("Image",img)
-cv2.imshow("Image Resize",imgResize)
+#cv2.imshow("Image Resize",imgResize)
+cv2.imshow("Image Cropped",imgCropped)
 cv2.waitKey(0)
 0xFF ==ord('q')
