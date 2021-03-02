@@ -1,2 +1,2 @@
-chapter1:
-	python3 chtp1.py
+cv1:
+	python3 compv1.py
