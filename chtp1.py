@@ -31,6 +31,10 @@ img = cv2.imread("Resources/wiz.jpg")
 
 # Convert image to grayscale (2 params;img to be converted and color space)
 imgGray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+# Blur image using cv
+imgBlur=cv2.GaussianBlur(imgGray,(7,7),0)
+
 cv2.imshow("Gray Image",imgGray)
+cv2.imshow("Blur Image", imgBlur)
 cv2.waitKey(0)
 0xFF ==ord('q')
