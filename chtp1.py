@@ -33,8 +33,12 @@ img = cv2.imread("Resources/wiz.jpg")
 imgGray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 # Blur image using cv
 imgBlur=cv2.GaussianBlur(imgGray,(7,7),0)
+# Edge detector using Canny(100 are the threshhols values)
+# To reduce edges increase threshhold
+imgCanny=cv2.Canny(img,150,200)
 
 cv2.imshow("Gray Image",imgGray)
 cv2.imshow("Blur Image", imgBlur)
+cv2.imshow("Canny Image", imgCanny)
 cv2.waitKey(0)
 0xFF ==ord('q')
